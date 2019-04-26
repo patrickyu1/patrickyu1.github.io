@@ -1,10 +1,13 @@
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
 
 $(function() {
     document.getElementById("home-icon").onclick = homeScroll;
     document.getElementById("about-icon").onclick = aboutScroll;
     document.getElementById("project-icon").onclick = projectsScroll;
     document.getElementById("contact-icon").onclick = contactScroll;
-    // document.getElementById("soccer").onclick = chika;
+    document.getElementById("soccer").onclick = chika;
     // document.getElementById("chika").onclick = soccer;
     var isScrolling = false;
   $(window).on('wheel', function(e) {
@@ -125,14 +128,13 @@ function preventDefault(e) {
     window.onmousewheel = document.onmousewheel = null;  
 }
 
-// function chika() {
-//     var soccer = document.getElementById("soccer");
-//     soccer.src = "./assets/images/chika dance.gif";
-//     soccer.style.width = "50%";
-//     soccer.style.left = "25%";
-//     soccer.style.top = "0%";
-//     soccer.id = "chika";
-// }
+function chika() {
+    var soccer = document.getElementById("soccer");
+    soccer.src = "./assets/images/chika dance.gif";
+    soccer.style.width = "50%";
+    soccer.style.left = "25%";
+    soccer.style.top = "0%";
+}
 
 // function ball() {
 //     var soccer = document.getElementById("chika");
