@@ -1,0 +1,368 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: #E5FFFC;
+    transition: background-color 1s;
+    touch-action: none;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* NAVBAR */
+#nav-bar {
+    position: fixed;
+    right: 0;
+    left:0;
+    bottom: 73%;
+    top: 0;
+    background-color: transparent;
+    transition: bottom 1s, background-color 1s;
+}
+
+#icons {
+    position: fixed;
+    right: 0;
+    left:0;
+    bottom: 10%;
+    top: 0;
+    background-color: #E5FFFC;
+    overflow: hidden;
+}
+
+#icons div:hover {
+    transform: translateY(-85%);
+    cursor: pointer;
+}
+
+#name {
+    position: absolute;
+    font-family: bebas-neue-rounded, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    left: 35.1%;
+    top: 10.2%;
+    font-size: 4.35vw;
+    letter-spacing: 1.47vw;
+    z-index: 3;
+    transition: top 1s;
+}
+
+#home-icon {
+    left: 9.9%;
+    top: 54.2%;
+    width: 3%;
+    height:42%;
+}
+
+#home {
+    width: 210.25%;
+    height: auto;
+    margin-top: 3%;
+}
+
+#about-icon {
+    left: 25.5%;
+    top: 54.2%;
+    width: 6%;
+    height: 42%;
+}
+
+#about {
+    width: 115%;
+    height: auto;
+    margin-top: 1%;
+}
+
+#project-icon {
+    left: 67.7%;
+    top: 48.2%;
+    width: 3%;
+    height: 25%;
+}
+
+#projects {
+    width: 190.2%;
+    height: auto;
+}
+
+#contact-icon {
+    left: 83.2%;
+    top: 48.5%;
+    width:5%;
+    height: 37%;
+}
+
+#contact {
+    width: 85.3%;
+    height: auto;
+    margin-top:10%;
+}
+
+#squiggle {
+    position: absolute;
+    top: 80.3%;
+    left: 0.9%;
+    z-index: 1;
+    width: 104%;
+    height: auto;
+    z-index: 3;
+    transition: height 1s, top 1s;
+}
+
+.nav-options {
+    font-family: forma-djr-display, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    padding-right: -20px;
+    font-size: 1.3vw;
+}
+
+#nav-bar div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .5s, top 1s, height 1s, background-color 1s;
+    z-index: 1;
+}
+
+/* HOME PAGE */
+
+#home-page {
+    position: absolute;
+    top: 34.7%;
+    margin-top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+}
+
+#home-page p {
+    position: absolute;
+    font-family: bebas-neue-rounded, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#outline {
+    backface-visibility: hidden;
+    animation: spin 10s linear forwards infinite; 
+}
+
+#home-page img {
+    position: absolute;
+    width: 29%;
+    height: auto;
+    left: 65%;
+    top: 4.5%;
+}
+
+#welcome {
+    left: 5.9%;
+    top: 5%;
+    font-size: 5.7vw;
+    letter-spacing: .64vw;
+}
+
+#look {  
+    left: 5.9%;
+    top: 40%;
+    font-size: 4vw;
+    letter-spacing: 0.4vw;
+}
+
+/* ABOUT PAGE */
+#about-page {
+    position: absolute;
+    margin-top: 0;
+    /* background-color: #FFEECC; */
+    top: 112%;
+    left:0;
+    right: 0;
+    bottom: -112%;
+}
+
+#about-page p {
+    position: absolute;
+}
+
+#about-title {
+    font-family: bebas-neue-rounded, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    left: 5.9%;
+    top: 10%;
+    font-size: 5.2vw;
+    letter-spacing: 1.64vw;
+}
+
+#about-text {
+    font-family: houschka-rounded, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.3vw;
+    letter-spacing: 0.24vw;
+    line-height: 4.5vw;
+    left: 5.9%;
+    top: 24%;
+    max-width: 60%;
+}
+
+#about-page img {
+    height: auto;
+    position: absolute;
+}
+
+#soccer {
+    left: 63%;
+    top: 3%;
+    width: 19%;
+}
+
+#controller {
+    left: 70%;
+    top: 37%;
+    width: 12%;
+    transform: rotate(-30deg);
+}
+
+#headphones {
+    left: 84%;
+    top: 19%;
+    width: 12%;
+    transform: rotate(25deg);
+}
+
+#mixer {
+    left: 80%;
+    top: 56%;
+    width: 17%;
+    transform: rotate(-10deg);
+}
+
+/* PROJECTS PAGE */
+#projects-page {
+    position: absolute;
+    margin-top: 0;
+    top: 220%;
+    left:0;
+    right: 0;
+    bottom: -220%;
+}
+
+#projects-page p {
+    position: absolute;
+    font-family: houschka-rounded, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+}
+#project-1 {
+    font-size: 3.1vw;
+    letter-spacing: 0.85vw;
+    top: 5%;
+    left: 5.9%;
+}
+
+#p1-desc {
+    font-size: 1.3vw;
+    letter-spacing: 0.24vw;
+    line-height: 4.5vw;
+    top: 12%;
+    left: 5.9%;
+}
+
+/* CONTACT PAGE */
+#contact-page {
+    position: absolute;
+    margin-top: 0;
+    top: 320%;
+    left:0;
+    right: 0;
+    bottom: -320%;
+}
+
+#contact-page p {
+    position: absolute;
+    font-family: bebas-neue-rounded, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#contact-page img {
+    height: auto;
+}
+
+#contact-page a {
+    position: absolute;
+}
+
+#contact-title {
+    left: 5.9%;
+    top: 2%;
+    font-size: 5.2vw;
+    letter-spacing: 1.64vw;
+}
+
+#message {
+    left: 5.9%;
+    top: 19%;
+    font-size: 4vw;
+    letter-spacing: 0.4vw;
+}
+
+#linkedin {
+    width: 30%;
+}
+
+#github {
+    width: 69.2%;
+}
+
+#mail {
+    width: 32%;
+}
+
+#linkedin-link {
+    left: 13.9%;
+    top: 38%;
+}
+
+#github-link {
+    left: 30.9%;
+    top: 38%;
+}
+
+#mail-link {
+    left: 47.9%;
+    top: 37%;
+}
+
+#resume {
+    width: 70%;
+}
+
+#resume-link {
+    top: 37%;
+    left: 65.9%;
+}
