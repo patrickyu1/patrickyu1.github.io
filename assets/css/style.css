@@ -299,7 +299,7 @@ body {
     top: 320%;
     left:0;
     right: 0;
-    bottom: -320%;
+    bottom: -300%;
 }
 
 #contact-page p {
@@ -326,7 +326,7 @@ body {
 
 #message {
     left: 5.9%;
-    top: 19%;
+    top: 23%;
     font-size: 4vw;
     letter-spacing: 0.4vw;
 }
@@ -345,17 +345,17 @@ body {
 
 #linkedin-link {
     left: 13.9%;
-    top: 38%;
+    top: 45%;
 }
 
 #github-link {
     left: 30.9%;
-    top: 38%;
+    top: 45%;
 }
 
 #mail-link {
     left: 47.9%;
-    top: 37%;
+    top: 43%;
 }
 
 #resume {
@@ -363,6 +363,6 @@ body {
 }
 
 #resume-link {
-    top: 37%;
+    top: 45%;
     left: 65.9%;
 }
