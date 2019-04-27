@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <script type="text/javascript" src="./jquery-3.4.0.min.js"></script>
         <script type="text/javascript" src="./assets/scripts/script.js"></script>
+        <script type="text/javascript" src="./assets/scripts/script2.js"></script>
     </head>
     <body>
         <div id = "nav-bar">
@@ -52,8 +53,41 @@
         </div>
 
         <div id = "projects-page">
-            <p id = 'project-1'> PROJECT 1</p>
-            <p id = 'p1-desc'> lorem ipsum blh balh</p>
+            <p id = 'projects-title'> PROJECTS </p>
+            <div id = "slideshow-container"> 
+                <div id = strip>
+                    <div class = "slides">
+                        <p id = 'p1-title'> Machine Learning</p>
+                        <p id = 'p1-date'> December 2018</p>
+                        <p id = 'p1-desc'> I built a multi-layer neural network in Python to solve a variety of machine learning problems, 
+                            including linear and nonlinear regression and classifying handwritten digits from the MNIST database.
+                            Additionally, I used a Recurrent Neural Net to identify the language of a given word by implementing a 
+                            hidden set of layers to summarize the list of characters.</p>
+                        <img id = "p1-img" src = "./assets/images/ml project.png"/>
+                    </div>
+
+                    <div class = "slides">
+                            <p id = 'p2-title'> Project 2</p>
+                            <p id = 'p2-date'> Whenever</p>
+                            <p id = 'p2-desc'> Blah blah</p>
+                            <img id = "p2-img" src = "./assets/images/soccer.png"/>
+                    </div>
+
+                    <div class = "slides">
+                            <p id = 'p3-title'> Project 3</p>
+                            <p id = 'p3-date'> Whenever</p>
+                            <p id = 'p3-desc'> Blah blah</p>
+                            <img id = "p3-img" src = "./assets/images/cookie.png"/>
+                    </div>
+                </div>
+                <a id="prev">&#10094;</a>
+                <a id="next">&#10095;</a>
+            </div>
+            <div id = dots style="text-align:center">
+                <span class="dot" id = dot-1></span> 
+                <span class="dot" id = dot-2></span> 
+                <span class="dot" id = dot-3></span> 
+            </div>
 
         </div>
 

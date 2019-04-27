@@ -11,7 +11,7 @@
 
 body {
     max-width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     width: 100%;
     background-color: #E5FFFC;
     transition: background-color 1s;
@@ -271,27 +271,131 @@ body {
     bottom: -220%;
 }
 
-#projects-page p {
-    position: absolute;
+#projects-page div p {
+    position: relative;
     font-family: houschka-rounded, sans-serif;
     font-style: normal;
     font-weight: 200;
+    max-width: 50%;
 }
-#project-1 {
-    font-size: 3.1vw;
-    letter-spacing: 0.85vw;
-    top: 5%;
+
+/* #projects-page div {
+    position: absolute;
+} */
+
+#projects-title {
+    position: absolute;
+    font-family: bebas-neue-rounded, sans-serif;
+    font-style: normal;
+    font-weight: 400;
     left: 5.9%;
+    top: 0%;
+    font-size: 5.2vw;
+    letter-spacing: 1.25vw;
+}
+
+#slideshow-container {
+    position: absolute;
+    left: 5.9%;
+    top: 14%;
+    right: 10%;
+    bottom: 25%;
+    /* border-radius: 2em; */
+    overflow: hidden;
+}
+
+#strip {
+    transition: left .4s;
+    position: absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    display: flex;
+    flex-direction:  row;
+}
+
+.slides {
+    position: relative;
+    bottom: 0;
+    
+}
+
+#prev, #next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -1%;
+    padding: .5%;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    font-weight: bold;
+    font-size: 2vw;
+    transition: background-color 0.6s ease;
+    border-radius: 0 1% 1% 0;
+    user-select: none;
+}
+
+#next {
+    right: 0;
+    border-radius: 3% 0 0 3%;
+}
+
+#prev:hover, #next:hover {
+    background-color: black;
+  }
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+#dots {
+    position: absolute;
+    top: 70%;
+    left: 47%;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+#p1-title {
+    font-size: 3.1vw;
+    letter-spacing: 0.3vw;
+    top: 2%;
+    left: 5%;
+    right: 20%;
+}
+
+#p1-date {
+    font-size: 1.2vw;
+    letter-spacing: 0.2vw;
+    top: 4%;
+    left: 5%;
 }
 
 #p1-desc {
     font-size: 1.3vw;
-    letter-spacing: 0.24vw;
-    line-height: 4.5vw;
-    top: 12%;
-    left: 5.9%;
+    letter-spacing: 0.18vw;
+    line-height: 2.5vw;
+    top: 10%;
+    left: 5%;
 }
 
+#p1-img {
+    position: absolute;
+    height: auto;
+    width: 38%;
+    left: 56%;
+    bottom: 13%;
+}
 /* CONTACT PAGE */
 #contact-page {
     position: absolute;

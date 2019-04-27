@@ -1,6 +1,6 @@
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
+// window.onbeforeunload = function () {
+//     window.scrollTo(0, 0);
+//   }
 
 $(function() {
     document.getElementById("home-icon").onclick = homeScroll;
@@ -22,22 +22,24 @@ $(function() {
         if (delta > 0){
             //scroll down
             // $('body').addClass('stop-scrolling')
+            smoothScroll(currentWindowHeight * (currentSlide + 1));
+            setTimeout(function(){isScrolling = false}, 650);
             page(currentSlide + 1);
             if (currentSlide == 0) {
                 smush();
             }
-            smoothScroll(currentWindowHeight * (currentSlide + 1));
         }
         else {
         //scroll up
             // $('body').addClass('stop-scrolling')
+            smoothScroll(currentWindowHeight * (currentSlide));
+            setTimeout(function(){isScrolling = false}, 650);
             page(currentSlide);
             if (currentSlide == 0 && howFarFromTop > 0) {
                 reset();
             }
-            smoothScroll(currentWindowHeight * (currentSlide));
         } 
-        setTimeout(function(){isScrolling = false}, 650);
+        
     } 
     // return false; // don't let the browser do the default scroll 
 });
@@ -169,4 +171,3 @@ $( window ).scroll(function() {
         $("#nav-bar" ).css( "background-color", "transparent");
     }
   });
-
