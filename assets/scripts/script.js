@@ -3,6 +3,9 @@ window.onbeforeunload = function () {
   }
 
 $(function() {
+    if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        document.getElementsByTagName("body")[0].style.overflow = "hidden"
+       }
     document.getElementById("home-icon").onclick = homeScroll;
     document.getElementById("about-icon").onclick = aboutScroll;
     document.getElementById("project-icon").onclick = projectsScroll;
