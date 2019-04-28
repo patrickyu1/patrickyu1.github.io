@@ -10,38 +10,49 @@ $(function() {
     document.getElementById("soccer").onclick = chika;
     // document.getElementById("chika").onclick = soccer;
     var isScrolling = false;
+    var currentSlide = 0;
   $(window).on('wheel', function(e) {
     if (!isScrolling){
     isScrolling = true;
-        var howFarFromTop = $(document).scrollTop(); //how far from the top have we scrolled?
+        // var howFarFromTop = $(document).scrollTop(); //how far from the top have we scrolled?
         var currentWindowHeight = $( window ).height(); //current window height for responsiveness
         var delta = e.originalEvent.deltaY; // just to know if it is scroll wheel up or down
         //find out what is our offset from the top so we can now how far do we have to scroll to  the next / previous element
-        var currentSlide = Math.floor(howFarFromTop / currentWindowHeight); //approximate which slide is on screen at the moment
+        // var currentSlide = Math.floor(howFarFromTop / currentWindowHeight); //approximate which slide is on screen at the moment
 
         if (delta > 0){
             //scroll down
             // $('body').addClass('stop-scrolling')
-            smoothScroll(currentWindowHeight * (currentSlide + 1));
-            setTimeout(function(){isScrolling = false}, 650);
-            page(currentSlide + 1);
-            if (currentSlide == 0) {
-                smush();
+            if (currentSlide < 3) {
+                currentSlide++;
+                smoothScroll(currentWindowHeight * currentSlide);
+                setTimeout(function(){isScrolling = false}, 800);
+                page(currentSlide);
+                if (currentSlide == 1) {
+                    smush();
+                }
+            } else {
+                isScrolling = false;
             }
         }
         else {
         //scroll up
             // $('body').addClass('stop-scrolling')
-            smoothScroll(currentWindowHeight * (currentSlide));
-            setTimeout(function(){isScrolling = false}, 650);
-            page(currentSlide);
-            if (currentSlide == 0 && howFarFromTop > 0) {
-                reset();
+            if (currentSlide > 0) {
+                currentSlide--;
+                smoothScroll(currentWindowHeight * currentSlide);
+                setTimeout(function(){isScrolling = false}, 800);
+                page(currentSlide);
+                if (currentSlide == 0) {
+                    reset();
+                }
+            } else {
+                isScrolling = false;
             }
         } 
         
     } 
-    // return false; // don't let the browser do the default scroll 
+    return false;// return false; // don't let the browser do the default scroll 
 });
   
   
