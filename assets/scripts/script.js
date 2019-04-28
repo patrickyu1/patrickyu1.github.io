@@ -1,14 +1,15 @@
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
+// window.onbeforeunload = function () {
+//     window.scrollTo(0, 0);
+//   }
 
 $(function() {
     document.getElementById("home-icon").onclick = homeScroll;
     document.getElementById("about-icon").onclick = aboutScroll;
     document.getElementById("project-icon").onclick = projectsScroll;
     document.getElementById("contact-icon").onclick = contactScroll;
+    document.getElementById("clickable").onclick = aboutScroll;
     document.getElementById("soccer").onclick = chika;
-    // document.getElementById("chika").onclick = soccer;
+    var chikaform = false;
     var isScrolling = false;
     var currentSlide = 0;
   $(window).on('wheel', function(e) {
@@ -50,12 +51,55 @@ $(function() {
                 isScrolling = false;
             }
         } 
-        
     } 
     return false;// return false; // don't let the browser do the default scroll 
 });
-  
-  
+function homeScroll() {
+    smoothScroll(0 * $( window ).height());
+    reset();
+    page(0);
+    currentSlide = 0;
+}
+
+function aboutScroll() {
+    smoothScroll(1 * $( window ).height());
+    smush();
+    page(1);
+    currentSlide = 1;
+}
+
+function projectsScroll() {
+    smoothScroll(2 * $( window ).height());
+    smush();
+    page(2);
+    currentSlide = 2;
+}
+
+function contactScroll() {
+    smoothScroll(3 * $( window ).height());
+    smush();
+    page(3);
+    currentSlide = 3;
+}  
+
+function chika() {
+    if (chikaform) {
+        var soccer = document.getElementById("soccer");
+        soccer.src = "./assets/images/soccer.png";
+        soccer.style.width = "19%";
+        soccer.style.left = "63%";
+        soccer.style.top = "3%";
+        chikaform = false;
+    } else {
+        var soccer = document.getElementById("soccer");
+        soccer.src = "./assets/images/chika dance.gif";
+        soccer.style.width = "50%";
+        soccer.style.left = "25%";
+        soccer.style.top = "0%";
+        chikaform = true;
+    }
+}
+
 });
 
 function smoothScroll(offsetPixels){
@@ -67,7 +111,6 @@ function smoothScroll(offsetPixels){
   $('html, body').animate({
     scrollTop: offsetPixels
   }, 800);
-
 //    $('body').removeClass('stop-scrolling');
 }
 
@@ -109,29 +152,7 @@ function smush() {
     document.getElementById("project-icon").style.top = "33.2%";
     document.getElementById("contact-icon").style.top = "33.8%";
 }
-function homeScroll() {
-    smoothScroll(0 * $( window ).height());
-    reset();
-    page(0);
-}
 
-function aboutScroll() {
-    smoothScroll(1 * $( window ).height());
-    smush();
-    page(1);
-}
-
-function projectsScroll() {
-    smoothScroll(2 * $( window ).height());
-    smush();
-    page(2);
-}
-
-function contactScroll() {
-    smoothScroll(3 * $( window ).height());
-    smush();
-    page(3);
-}
 
 function preventDefault(e) {
     e = e || window.event;
@@ -158,21 +179,7 @@ function preventDefault(e) {
     window.onmousewheel = document.onmousewheel = null;  
 }
 
-function chika() {
-    var soccer = document.getElementById("soccer");
-    soccer.src = "./assets/images/chika dance.gif";
-    soccer.style.width = "50%";
-    soccer.style.left = "25%";
-    soccer.style.top = "0%";
-}
 
-// function ball() {
-//     var soccer = document.getElementById("chika");
-//     soccer.src = "./assets/images/soccer.png";
-//     soccer.style.width = "19%";
-//     soccer.style.left = "63%";
-//     soccer.style.top = "3%";
-// }
 
 function page(next) {
     switch (next) {

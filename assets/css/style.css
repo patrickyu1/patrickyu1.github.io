@@ -11,7 +11,7 @@
 
 body {
     max-width: 100%;
-    /* overflow-x: hidden; */
+    overflow: hidden;
     width: 100%;
     background-color: #E5FFFC;
     transition: background-color 1s;
@@ -264,6 +264,38 @@ body {
     letter-spacing: 0.4vw;
 }
 
+#clickable {
+    position: absolute;
+    width: 3%;
+    height: 10%;
+    left: 45%;
+    top:80%;
+}
+@keyframes bounce {
+    100% {transform: translateY(-100%);}
+}
+#clickable:hover {
+    cursor: pointer;
+}
+
+#arrow {
+    position: relative;
+    top: 40%;
+    left: 20%;
+    animation: bounce .45s ease-out infinite alternate;
+}
+
+i {
+    border: 1px solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 120.5%;
+  }
+
+.down {
+    transform: rotate(45deg);
+}
+
 /* ABOUT PAGE */
 #about-page {
     position: absolute;
@@ -294,11 +326,31 @@ body {
     font-style: normal;
     font-weight: 200;
     font-size: 1.3vw;
-    letter-spacing: 0.24vw;
+    letter-spacing: 0.14vw;
     line-height: 4.5vw;
     left: 5.9%;
     top: 24%;
     max-width: 60%;
+}
+
+.button {
+    font-family: bebas-neue-rounded, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.2vw;
+    letter-spacing: 0.24vw;
+    padding: 1% 2%;
+    border: 3px solid black;
+    border-radius: 12%;
+    background-color: #62F7C6;
+    top: 72%;
+}
+#skills { 
+    left: 17%;   
+}
+
+#experience {
+    left: 30%;
 }
 
 #about-page img {
@@ -402,7 +454,7 @@ body {
     font-weight: bold;
     font-size: 2vw;
     transition: background-color 0.6s ease;
-    border-radius: 0 1% 1% 0;
+    border-radius: 0 3% 3% 0;
     user-select: none;
 }
 
