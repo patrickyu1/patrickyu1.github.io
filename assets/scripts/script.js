@@ -1,6 +1,6 @@
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-//   }
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
 
 $(function() {
     document.getElementById("home-icon").onclick = homeScroll;
@@ -12,11 +12,15 @@ $(function() {
     var chikaform = false;
     var isScrolling = false;
     var currentSlide = 0;
+    var light = false;
+    var wheel = false;
+
   $(window).on('wheel', function(e) {
+      wheel = true;
     if (!isScrolling){
     isScrolling = true;
         // var howFarFromTop = $(document).scrollTop(); //how far from the top have we scrolled?
-        var currentWindowHeight = $( window ).height(); //current window height for responsiveness
+        // var currentWindowHeight = $( window ).height(); //current window height for responsiveness
         var delta = e.originalEvent.deltaY; // just to know if it is scroll wheel up or down
         //find out what is our offset from the top so we can now how far do we have to scroll to  the next / previous element
         // var currentSlide = Math.floor(howFarFromTop / currentWindowHeight); //approximate which slide is on screen at the moment
@@ -24,36 +28,93 @@ $(function() {
         if (delta > 0){
             //scroll down
             // $('body').addClass('stop-scrolling')
-            if (currentSlide < 3) {
-                currentSlide++;
-                smoothScroll(currentWindowHeight * currentSlide);
-                setTimeout(function(){isScrolling = false}, 650);
-                page(currentSlide);
-                if (currentSlide == 1) {
-                    smush();
-                }
-            } else {
-                isScrolling = false;
-            }
+            down();
         }
         else {
         //scroll up
             // $('body').addClass('stop-scrolling')
-            if (currentSlide > 0) {
-                currentSlide--;
-                smoothScroll(currentWindowHeight * currentSlide);
-                setTimeout(function(){isScrolling = false}, 650);
-                page(currentSlide);
-                if (currentSlide == 0) {
-                    reset();
-                }
-            } else {
-                isScrolling = false;
-            }
+            up();
         } 
     } 
     return false;// return false; // don't let the browser do the default scroll 
 });
+
+// window.onscroll = function(){
+//     if (!wheel) {
+//         var howFarFromTop = $(document).scrollTop();
+//         if (howFarFromTop > $( window ).height() * 3) {
+//             page(3);
+//             currentSlide = 3;
+//         } else if (howFarFromTop > $( window ).height() * 2) {
+//             page(2);
+//             currentSlide = 2;
+//         } else if (howFarFromTop > $( window ).height() * 1) {
+//             page(1);
+//             currentSlide = 1;
+//         } else {
+//             page(0);
+//             currentSlide = 0;
+//         }
+//     }
+// };
+
+$("#about-main, #nav-bar, #skills, #experience").click(function() {
+    if (light) {
+        $("#skills-text").removeClass("show");
+        $("#skills-text").addClass("hidden");
+        $("#experience-text").removeClass("show");
+        $("#experience-text").addClass("hidden");
+        $("#about-main").css("opacity", 1);
+        $("#nav-bar").css("opacity", 1);
+        $("#experience").css("opacity", 1);
+        $("#skills").css("opacity", 1);
+        isScrolling = false;
+        setTimeout(function(){light = false}, 50);
+    }
+})
+
+$("#skills").click(function() {
+    if (!light) {
+        $("#skills-text").removeClass("hidden");
+        $("#skills-text").addClass("show");
+        $("#about-main").css("opacity", 0.5);
+        $("#nav-bar").css("opacity", 0.5);
+        $("#experience").css("opacity", 0.5);
+        $("#skills").css("opacity", 1);
+        isScrolling = true;
+        setTimeout(function(){light = true}, 50);
+    }
+})
+
+$("#experience").click(function() {
+    if (!light) {
+        $("#experience-text").removeClass("hidden");
+        $("#experience-text").addClass("show");
+        $("#about-main").css("opacity", 0.5);
+        $("#nav-bar").css("opacity", 0.5);
+        $("#skills").css("opacity", 0.5);
+        isScrolling = true;
+        setTimeout(function(){light = true}, 50);
+    }
+})
+
+document.onkeydown = function (event) {
+    switch (event.keyCode) {
+        case 38:
+        if (!isScrolling){
+            isScrolling = true;
+            up();
+        }
+        break;
+        case 40: 
+        if (!isScrolling){
+            isScrolling = true;
+            down();
+        }
+        break;
+    }
+};
+
 function homeScroll() {
     smoothScroll(0 * $( window ).height());
     reset();
@@ -80,7 +141,37 @@ function contactScroll() {
     smush();
     page(3);
     currentSlide = 3;
-}  
+} 
+
+function down() {
+    if (currentSlide < 3) {
+                currentSlide++;
+                smoothScroll($( window ).height() * currentSlide);
+                setTimeout(function(){isScrolling = false}, 650);
+                page(currentSlide);
+                if (currentSlide == 1) {
+                    smush();
+                }
+            } else {
+                isScrolling = false;
+            }
+            wheel = false;
+}
+
+function up() {
+    if (currentSlide > 0) {
+        currentSlide--;
+        smoothScroll($( window ).height() * currentSlide);
+        setTimeout(function(){isScrolling = false}, 650);
+        page(currentSlide);
+        if (currentSlide == 0) {
+            reset();
+        }
+    } else {
+        isScrolling = false;
+    }
+    wheel = false;
+}
 
 function chika() {
     if (chikaform) {
@@ -154,30 +245,30 @@ function smush() {
 }
 
 
-function preventDefault(e) {
-    e = e || window.event;
-    if (e.preventDefault)
-        e.preventDefault();
-    e.returnValue = false;  
-  }
+// function preventDefault(e) {
+//     e = e || window.event;
+//     if (e.preventDefault)
+//         e.preventDefault();
+//     e.returnValue = false;  
+//   }
 
-  function wheel(e) {
-    preventDefault(e);
-  }
+//   function wheel(e) {
+//     preventDefault(e);
+//   }
   
-  function disable_scroll() {
-    if (window.addEventListener) {
-        window.addEventListener('DOMMouseScroll', wheel, false);
-    }
-    window.onmousewheel = document.onmousewheel = wheel;
-  }
+//   function disable_scroll() {
+//     if (window.addEventListener) {
+//         window.addEventListener('DOMMouseScroll', wheel, false);
+//     }
+//     window.onmousewheel = document.onmousewheel = wheel;
+//   }
 
-  function enable_scroll() {
-    if (window.removeEventListener) {
-        window.removeEventListener('DOMMouseScroll', wheel, false);
-    }
-    window.onmousewheel = document.onmousewheel = null;  
-}
+//   function enable_scroll() {
+//     if (window.removeEventListener) {
+//         window.removeEventListener('DOMMouseScroll', wheel, false);
+//     }
+//     window.onmousewheel = document.onmousewheel = null;  
+// }
 
 
 

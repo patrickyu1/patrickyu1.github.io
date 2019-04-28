@@ -11,7 +11,7 @@
 
 body {
     max-width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
     background-color: #E5FFFC;
     transition: background-color 1s;
@@ -131,7 +131,7 @@ body {
 #squiggle {
     position: absolute;
     left: 0.9%;
-    z-index: 1;
+    z-index: 0;
     height: auto;
     z-index: 3;
     top: 81.3%;
@@ -193,7 +193,6 @@ body {
     }
     #about {
         width: 120%;
-        border: 1px solid purple;
     }
     #projects {
         width: 220.2%;
@@ -303,10 +302,17 @@ i {
     /* background-color: #FFEECC; */
     top: 112%;
     left:0;
+    height: 100%;
     right: 0;
     bottom: -112%;
 }
-
+#about-main {
+    position: absolute;
+    top:0; 
+    bottom:0;
+    right:0;
+    left:0;
+}
 #about-page p {
     position: absolute;
 }
@@ -332,7 +338,9 @@ i {
     top: 24%;
     max-width: 60%;
 }
-
+.button:hover {
+    cursor: pointer;
+}
 .button {
     font-family: bebas-neue-rounded, sans-serif;
     font-style: normal;
@@ -351,6 +359,67 @@ i {
 
 #experience {
     left: 30%;
+}
+#skills-text{
+    position: absolute;
+    font-family: houschka-rounded, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.8vw;
+    letter-spacing: 0.35vw;
+    line-height: 4.5vw;
+}
+#skills-text, #experience-text{
+    position: absolute;
+    top:30%;
+    padding: 1% 2%;
+    border: 3px solid black;
+    border-radius: 12px;
+    background-color: white;
+    transition: left 1s;
+}
+
+#experience-text {
+    top: 12%;
+    width: 80%;
+}
+
+#experience-text p {
+    font-family: houschka-rounded, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    position: relative;
+}
+
+.exp-title {
+    font-size: 2.1vw;
+    letter-spacing: 0.35vw;
+    line-height: 4.5vw;
+    max-width: 90%;
+}
+
+#exp-title1 {
+    top: -2%;
+}
+
+.exp-desc {
+    font-size: 1.3vw;
+    letter-spacing: 0.2vw;
+    line-height: 3vw;
+    max-width: 100%;
+}
+
+#exp-desc1 {
+    top: 12%;
+}
+
+.hidden {
+    left: -100%;
+}
+
+.show {
+    left: 5%;
+    z-index: 1;
 }
 
 #about-page img {
@@ -652,6 +721,15 @@ i {
         line-height: 3.5vw;
         top: 30%;
         max-width: 60%;
+    }
+    .button {
+        top: 74%
+    }
+    #skills {
+        left: 31%;
+    }
+    #experience {
+        left: 45%;
     }
     #mixer {
         top: 50%;
