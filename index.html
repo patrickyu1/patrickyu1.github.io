@@ -10,19 +10,19 @@
     <body>
         <div id = "nav-bar">
             <div id = "icons">
-                <div id = 'home-icon'> 
+                <div id = 'home-icon' class = "icon"> 
                     <p class = 'nav-options'> HOME </p>
                     <img id = 'home' src = './assets/images/cookie.png'/>
                 </div>
-                <div id = 'about-icon'>
+                <div id = 'about-icon' class = "icon">
                     <p class = 'nav-options'> ABOUT ME </p>
                     <img id = 'about' src = './assets/images/volleyball.png'/>
                 </div>
-                <div id = 'project-icon'>
+                <div id = 'project-icon' class = "icon">
                     <p class = 'nav-options'> PROJECTS </p>
                     <img id = 'projects' src = './assets/images/laptop.png'/>
                 </div>
-                <div id = 'contact-icon'>
+                <div id = 'contact-icon' class = "icon">
                     <p class = 'nav-options'> CONTACT </p>
                     <img id = 'contact' src = './assets/images/phone.png'/>
                 </div>
@@ -57,27 +57,39 @@
             <div id = "slideshow-container"> 
                 <div id = strip>
                     <div class = "slides">
-                        <p id = 'p1-title'> Machine Learning</p>
-                        <p id = 'p1-date'> December 2018</p>
-                        <p id = 'p1-desc'> I built a multi-layer neural network in Python to solve a variety of machine learning problems, 
-                            including linear and nonlinear regression and classifying handwritten digits from the MNIST database.
-                            Additionally, I used a Recurrent Neural Net to identify the language of a given word by implementing a 
-                            hidden set of layers to summarize the list of characters.</p>
-                        <img id = "p1-img" src = "./assets/images/ml project.png"/>
+                        <div class = "p-text">
+                            <p id = 'p1-title' class = "title"> Machine Learning</p>
+                            <p id = 'p1-date' class = "date"> December 2018</p>
+                            <p id = 'p1-desc' class = "desc"> I built a multi-layer neural network in Python to solve a variety of machine learning problems, 
+                                including linear and nonlinear regression and classifying handwritten digits from the MNIST database.
+                                Additionally, I used a Recurrent Neural Net to identify the language of a given word by implementing a 
+                                hidden set of layers to summarize the list of characters.</p>
+                        </div>
+                        <div class = "p-img">
+                            <img id = "p1-img" src = "./assets/images/ml project.png"/>
+                        </div>
                     </div>
 
                     <div class = "slides">
-                            <p id = 'p2-title'> Project 2</p>
-                            <p id = 'p2-date'> Whenever</p>
-                            <p id = 'p2-desc'> Blah blah</p>
+                        <div class = "p-text">
+                            <p id = 'p2-title' class = "title"> Project 2</p>
+                            <p id = 'p2-date' class = "date"> Whenever</p>
+                            <p id = 'p2-desc' class = "desc"> Blah blah</p>
+                        </div>
+                        <div class = "p-img">
                             <img id = "p2-img" src = "./assets/images/soccer.png"/>
+                        </div>
                     </div>
 
                     <div class = "slides">
-                            <p id = 'p3-title'> Project 3</p>
-                            <p id = 'p3-date'> Whenever</p>
-                            <p id = 'p3-desc'> Blah blah</p>
+                        <div class = "p-text">
+                            <p id = 'p3-title' class = "title"> Project 3</p>
+                            <p id = 'p3-date' class = "date"> Whenever</p>
+                            <p id = 'p3-desc' class = "desc"> Blah blah</p>
+                        </div>
+                        <div class = "p-img">
                             <img id = "p3-img" src = "./assets/images/cookie.png"/>
+                        </div>
                     </div>
                 </div>
                 <a id="prev">&#10094;</a>

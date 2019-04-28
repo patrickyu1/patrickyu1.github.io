@@ -26,6 +26,8 @@ body {
 /* NAVBAR */
 #nav-bar {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     right: 0;
     left:0;
     bottom: 73%;
@@ -34,14 +36,27 @@ body {
     transition: bottom 1s, background-color 1s;
 }
 
+.icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .5s, top 1s;
+    z-index: 1;
+}
+
 #icons {
-    position: fixed;
+    position: relative;
+    display: flex;
+    flex-direction: row;
     right: 0;
     left:0;
-    bottom: 10%;
+    bottom: 0;
     top: 0;
+    height: 89%;
     background-color: #E5FFFC;
     overflow: hidden;
+    transition: top 1s, height 1s, background-color 1s;
 }
 
 #icons div:hover {
@@ -76,20 +91,20 @@ body {
 }
 
 #about-icon {
-    left: 25.5%;
+    left: 22.5%;
     top: 54.2%;
-    width: 6%;
+    width: 6.8%;
     height: 42%;
 }
 
 #about {
-    width: 115%;
+    width: 105%;
     height: auto;
     margin-top: 1%;
 }
 
 #project-icon {
-    left: 67.7%;
+    left: 57.9%;
     top: 48.2%;
     width: 3%;
     height: 25%;
@@ -101,7 +116,7 @@ body {
 }
 
 #contact-icon {
-    left: 83.2%;
+    left: 70.6%;
     top: 48.5%;
     width:5%;
     height: 37%;
@@ -115,12 +130,12 @@ body {
 
 #squiggle {
     position: absolute;
-    top: 80.3%;
     left: 0.9%;
     z-index: 1;
-    width: 104%;
     height: auto;
     z-index: 3;
+    top: 81.3%;
+    width: 104%;
     transition: height 1s, top 1s;
 }
 
@@ -132,13 +147,69 @@ body {
     font-size: 1.3vw;
 }
 
-#nav-bar div {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform .5s, top 1s, height 1s, background-color 1s;
-    z-index: 1;
+@media screen and (min-aspect-ratio: 8/5) {
+    #icons {
+        height: 89%;
+    }
+    #squiggle {
+        top: 81.3%;
+        width: 104%;
+    }
+    #home {
+        width: 210.25%;
+    }
+    #about {
+        width: 105%;
+    }
+    #projects {
+        width: 190.2%;
+    }
+    #contact {
+        width: 85.3%;
+    }
+    #contact-icon {
+        left: 70.6%;
+    }
+    .nav-options {
+        font-size: 1.3vw;
+    }
+    #name {
+        top: 10.2%;
+        font-size: 4.35vw;
+    }
+}
+
+@media screen and (max-aspect-ratio: 5/3) {
+    #icons {
+        height: 85%;
+    }
+    #squiggle {
+        left: -12%;
+        top: 73.3%;
+        width: 170%;
+    }
+    #home {
+        width: 240.25%;
+    }
+    #about {
+        width: 120%;
+    }
+    #projects {
+        width: 220.2%;
+    }
+    #contact {
+        width: 95.3%;
+    }
+    #contact-icon {
+        left: 72.0%;
+    }
+    .nav-options {
+        font-size: 1.5vw;
+    }
+    #name {
+        top: 12.2%;
+        font-size: 4.65vw;
+    }
 }
 
 /* HOME PAGE */
@@ -276,12 +347,8 @@ body {
     font-family: houschka-rounded, sans-serif;
     font-style: normal;
     font-weight: 200;
-    max-width: 50%;
+    max-width: 110%;
 }
-
-/* #projects-page div {
-    position: absolute;
-} */
 
 #projects-title {
     position: absolute;
@@ -311,13 +378,15 @@ body {
     top:0;
     bottom: 0;
     display: flex;
-    flex-direction:  row;
+    flex-direction: row;
 }
 
 .slides {
     position: relative;
     bottom: 0;
-    
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid purple; */
 }
 
 #prev, #next {
@@ -366,35 +435,43 @@ body {
   background-color: #717171;
 }
 
-#p1-title {
+.title {
     font-size: 3.1vw;
     letter-spacing: 0.3vw;
+    left: 8%;
     top: 2%;
-    left: 5%;
     right: 20%;
 }
 
-#p1-date {
+.p-img {
+    flex: 1;
+}
+
+.p-text {
+    flex: 1;
+}
+.date {
     font-size: 1.2vw;
     letter-spacing: 0.2vw;
     top: 4%;
-    left: 5%;
+    left: 8%;
 }
 
-#p1-desc {
+.desc {
     font-size: 1.3vw;
     letter-spacing: 0.18vw;
     line-height: 2.5vw;
     top: 10%;
-    left: 5%;
+    left: 8%;
+    right: 30%;
 }
 
 #p1-img {
-    position: absolute;
+    position: relative;
     height: auto;
-    width: 38%;
-    left: 56%;
-    bottom: 13%;
+    top: 10%;
+    width: 75%;
+    left: 12%;
 }
 /* CONTACT PAGE */
 #contact-page {
@@ -469,4 +546,106 @@ body {
 #resume-link {
     top: 45%;
     left: 65.9%;
+}
+
+@media screen and (min-aspect-ratio: 2/1) {
+    #nav-bar {
+        bottom: 65%;
+    }
+    #icons {
+        height: 89%;
+    }
+    #squiggle {
+        top: 81.3%;
+        width: 104%;
+    }
+    #home {
+        width: 210.25%;
+    }
+    #about {
+        width: 105%;
+    }
+    #projects {
+        width: 190.2%;
+    }
+    #contact {
+        width: 85.3%;
+    }
+    #contact-icon {
+        left: 70.6%;
+    }
+    .nav-options {
+        font-size: 1.3vw;
+    }
+    #name {
+        top: 10.2%;
+        font-size: 4.35vw;
+    }
+    #home-page img {
+        position: absolute;
+        width: 25%;
+        height: auto;
+        left: 68%;
+        top: -1.5%;
+    }
+    #about-title {
+        top: 13%;
+        font-size: 4.8vw;
+        letter-spacing: 1.44vw;
+    }
+    #about-text {
+        font-size: 1.3vw;
+        letter-spacing: 0.2vw;
+        line-height: 3.5vw;
+        top: 30%;
+        max-width: 60%;
+    }
+    #mixer {
+        top: 50%;
+    }
+    #projects-title {
+        top: 5%;
+        font-size: 4.5vw;
+        letter-spacing: 1vw;
+    }
+    #slideshow-container {
+        left: 5.9%;
+        top: 18%;
+        right: 12%;
+    }
+    .title {
+        font-size: 2.5vw;
+        letter-spacing: 0.2vw;
+        left: 8%;
+    }
+    .date {
+        font-size: 1vw;
+        letter-spacing: 0.15vw;
+        top: 3.5%;
+        left: 8%;
+    }
+    .desc {
+        font-size: 1.2vw;
+        letter-spacing: 0.2vw;
+        line-height: 1.9vw;
+        top: 8%;
+        left: 8%;
+    } 
+    #p1-img {
+        top: 7%;
+        width: 55%;
+        left: 19%;
+    }
+    #contact-title {
+        left: 5.9%;
+        top: 4%;
+        font-size: 4.5vw;
+        letter-spacing: 1.24vw;
+    }
+    #message {
+        left: 5.9%;
+        top: 25%;
+        font-size: 3vw;
+        letter-spacing: 0.4vw;
+    }
 }

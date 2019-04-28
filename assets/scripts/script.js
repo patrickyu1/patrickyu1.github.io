@@ -61,19 +61,38 @@ function smoothScroll(offsetPixels){
 }
 
 function reset() {
-    document.getElementById("nav-bar").style.bottom = "73%";
-    document.getElementById("name").style.top = "10.2%";
-    document.getElementById("squiggle").style.top = "80.3%";
+    if (screen.width / screen.height >= 1.6) {
+        document.getElementById("name").style.top = "10.2%";
+        document.getElementById("squiggle").style.top = "81.3%";
+    } else {
+        document.getElementById("name").style.top = "12.2%";
+        document.getElementById("squiggle").style.top = "73.3%";
+    }
+    if (screen.width / screen.height >= 2) {
+        document.getElementById("nav-bar").style.bottom = "65%";
+    } else {
+        document.getElementById("nav-bar").style.bottom = "73%";
+    }
     document.getElementById("home-icon").style.top = "54.2%";
     document.getElementById("about-icon").style.top = "54.2%";
     document.getElementById("project-icon").style.top = "48.2%";
     document.getElementById("contact-icon").style.top = "49.5%";
+    
 }
 
 function smush() {
-    document.getElementById("nav-bar").style.bottom = "81%";
-    document.getElementById("name").style.top = "20.2%";
-    document.getElementById("squiggle").style.top = "77.3%";
+    if (screen.width / screen.height >= 1.6) {
+        document.getElementById("name").style.top = "20.2%";
+        document.getElementById("squiggle").style.top = "77.3%";
+    } else {
+        document.getElementById("name").style.top = "26.2%";
+        document.getElementById("squiggle").style.top = "71.3%";
+    }
+    if (screen.width / screen.height >= 2) {
+        document.getElementById("nav-bar").style.bottom = "76%";
+    } else {
+        document.getElementById("nav-bar").style.bottom = "81%";
+    }
     document.getElementById("home-icon").style.top = "37.5%";
     document.getElementById("about-icon").style.top = "37.5%";
     document.getElementById("project-icon").style.top = "33.2%";
