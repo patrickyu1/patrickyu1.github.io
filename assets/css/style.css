@@ -265,8 +265,8 @@ body {
 
 #clickable {
     position: absolute;
-    width: 3%;
-    height: 10%;
+    width: 4%;
+    height: 15%;
     left: 45%;
     top:80%;
 }
@@ -288,7 +288,7 @@ i {
     border: 1px solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
-    padding: 120.5%;
+    padding: 140.5%;
   }
 
 .down {
