@@ -26,7 +26,7 @@ $(function() {
             if (currentSlide < 3) {
                 currentSlide++;
                 smoothScroll(currentWindowHeight * currentSlide);
-                setTimeout(function(){isScrolling = false}, 800);
+                setTimeout(function(){isScrolling = false}, 650);
                 page(currentSlide);
                 if (currentSlide == 1) {
                     smush();
@@ -41,7 +41,7 @@ $(function() {
             if (currentSlide > 0) {
                 currentSlide--;
                 smoothScroll(currentWindowHeight * currentSlide);
-                setTimeout(function(){isScrolling = false}, 800);
+                setTimeout(function(){isScrolling = false}, 650);
                 page(currentSlide);
                 if (currentSlide == 0) {
                     reset();
