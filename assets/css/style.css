@@ -193,6 +193,7 @@ body {
     }
     #about {
         width: 120%;
+        border: 1px solid purple;
     }
     #projects {
         width: 220.2%;
@@ -548,7 +549,7 @@ body {
     left: 65.9%;
 }
 
-@media screen and (min-aspect-ratio: 2/1) {
+@media screen and (min-aspect-ratio: 5/2) {
     #nav-bar {
         bottom: 65%;
     }

@@ -30,7 +30,6 @@ $(document).ready(function() {
         $("#strip").css("left", -3 * 2 * distanceToNextImage);
     })
 
-	
 });
 
 // function resize() {
