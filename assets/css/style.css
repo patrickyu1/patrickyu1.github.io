@@ -269,6 +269,7 @@ body {
     height: 15%;
     left: 45%;
     top:80%;
+    border: 1px solid black;
 }
 @keyframes bounce {
     100% {transform: translateY(-100%);}
@@ -281,6 +282,8 @@ body {
     position: absolute;
     top: 40%;
     left: 20%;
+    height: auto;
+    width: 75%;
     animation: bounce .45s ease-out infinite alternate;
 }
 
@@ -288,7 +291,7 @@ i {
     border: 1px solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
-    padding: 140.5%;
+    padding: 30.5%;
   }
 
 .down {
