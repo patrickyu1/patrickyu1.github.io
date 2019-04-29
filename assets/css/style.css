@@ -278,7 +278,7 @@ body {
 }
 
 #arrow {
-    position: relative;
+    position: absolute;
     top: 40%;
     left: 20%;
     animation: bounce .45s ease-out infinite alternate;
