@@ -269,7 +269,6 @@ body {
     height: 15%;
     left: 45%;
     top:80%;
-    border: 1px solid black;
 }
 @keyframes bounce {
     100% {transform: translateY(-100%);}
