@@ -7,11 +7,12 @@ $(function() {
         document.getElementsByTagName("body")[0].style.overflow = "hidden"
        }
     document.getElementById("home-icon").onclick = homeScroll;
+    document.getElementById("name-icon").onclick = homeScroll;
     document.getElementById("about-icon").onclick = aboutScroll;
     document.getElementById("project-icon").onclick = projectsScroll;
     document.getElementById("contact-icon").onclick = contactScroll;
     document.getElementById("clickable").onclick = aboutScroll;
-    document.getElementById("soccer").onclick = chika;
+    // document.getElementById("soccer").onclick = chika;
     var chikaform = false;
     var isScrolling = false;
     var currentSlide = 0;

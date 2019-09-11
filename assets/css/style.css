@@ -64,6 +64,10 @@ body {
     cursor: pointer;
 }
 
+#name-icon:hover{
+    cursor: pointer;
+}
+
 #name {
     position: absolute;
     font-family: bebas-neue-rounded, sans-serif;
@@ -420,8 +424,12 @@ i {
 }
 
 .show {
-    left: 5%;
+    left: 8%;
     z-index: 1;
+}
+
+#skills-text.show{
+    left: 3%;
 }
 
 #about-page img {
@@ -597,6 +605,22 @@ i {
     width: 75%;
     left: 12%;
 }
+
+#p2-img {
+    position: relative;
+    height: auto;
+    top: 15%;
+    width: 82%;
+    left: 9%;
+}
+
+#p3-img {
+    position: relative;
+    height: auto;
+    top: 18%;
+    width: 82%;
+    left: 9%;
+}
 /* CONTACT PAGE */
 #contact-page {
     position: absolute;
@@ -638,18 +662,21 @@ i {
 
 #linkedin {
     width: 30%;
+    height: auto;
 }
 
 #github {
     width: 69.2%;
+    height: auto;
 }
 
 #mail {
     width: 32%;
+    height: auto;
 }
 
 #linkedin-link {
-    left: 13.9%;
+    left: 16%;
     top: 45%;
 }
 
@@ -659,17 +686,18 @@ i {
 }
 
 #mail-link {
-    left: 47.9%;
+    left: 38.9%;
     top: 45%;
 }
 
 #resume {
     width: 70%;
+    height: auto;
 }
 
 #resume-link {
     top: 45%;
-    left: 65.9%;
+    left: 60.9%;
 }
 
 @media screen and (min-aspect-ratio: 5/2) {

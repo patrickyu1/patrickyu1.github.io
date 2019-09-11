@@ -26,7 +26,7 @@
                     <p class = 'nav-options'> CONTACT </p>
                     <img id = 'contact' src = './assets/images/phone.png'/>
                 </div>
-                <p id = 'name'> PATRICK YU </p>
+                <a id = "name-icon"><p id = 'name'> PATRICK YU </p></a>
             </div> 
             <img id = 'squiggle' src = './assets/images/full squiggle.png'/>
             
@@ -58,7 +58,7 @@
             </div>
             <p id = "skills" class = "button"> SKILLS </p>
             <p id = "experience" class = "button"> EXPERIENCE </p>
-            <P id = "skills-text" class = "hidden"> Python, Java, C, SQL, NumPy, Scratch, Scheme, LaTeX, Microsoft Office </P>
+            <P id = "skills-text" class = "hidden"> Python, Java, C, SQL, NumPy, JavaScript, HTML/CSS, LaTeX, Microsoft Office </P>
             <div id = "experience-text" class = "hidden"> 
                 <p id = "exp-title1" class = "exp-title"> Code Coach </p> 
                 <p id = "exp-desc1" class = "exp-desc">I work at The Coder School Berkeley as a Code Coach, teaching students from ages 7-18 the basics of 
@@ -91,21 +91,28 @@
                         <div class = "p-text">
                             <p id = 'p2-title' class = "title"> Bear Maps</p>
                             <p id = 'p2-date' class = "date"> April 2018</p>
-                            <p id = 'p2-desc' class = "desc"> Blah blah</p>
+                            <p id = 'p2-desc' class = "desc"> I created a web mapping application using Java that allows users to search for locations around Berkeley, 
+                                including the option to zoom onto different sections. <br>
+                                I used Map Rastering to convert the information on a map to a pixel-by-pixel image and used shortest path algorithms, 
+                                such as A* and Dijkstra’s, to find the optimal path between two locations.
+                                 </p>
                         </div>
                         <div class = "p-img">
-                            <img id = "p2-img" src = "./assets/images/soccer.png"/>
+                            <img id = "p2-img" src = "./assets/images/bear maps.png"/>
                         </div>
                     </div>
 
                     <div class = "slides">
                         <div class = "p-text">
-                            <p id = 'p3-title' class = "title"> Project 3</p>
-                            <p id = 'p3-date' class = "date"> Whenever</p>
-                            <p id = 'p3-desc' class = "desc"> Blah blah</p>
+                            <p id = 'p3-title' class = "title"> RISC-V Processor</p>
+                            <p id = 'p3-date' class = "date"> March 2019</p>
+                            <p id = 'p3-desc' class = "desc"> I designed a RISC-V Processor using Logisim that takes in a RISC-V instruction in machine language 
+                                and alters the data in CPU registers and memory using a collection of control signals.
+                                    The datapath has a <br> 2-stage pipeline architecture that separates the instruction fetch from the rest of the data path and 
+                                    includes an ALU that supports 14 arithmetic operations.</p>
                         </div>
                         <div class = "p-img">
-                            <img id = "p3-img" src = "./assets/images/cookie.png"/>
+                            <img id = "p3-img" src = "./assets/images/datapath.png"/>
                         </div>
                     </div>
                 </div>
@@ -124,10 +131,10 @@
             <p id = contact-title> CONTACT </p>
             <p id = 'message'> FEEL FREE TO SEND ME A MESSAGE AT ANY TIME! </p>
             <a id = 'linkedin-link' target = "_blank" href = "https://www.linkedin.com/in/patrick-yu-517095159/" > <img id = 'linkedin' src = './assets/images/linkedin.png'/> </a>
-            <a id = 'github-link' target = "_blank" href = "https://github.com/" > <img id = 'github' src = './assets/images/github.png'/> </a>
+            <!-- <a id = 'github-link' target = "_blank" href = "https://github.com/" > <img id = 'github' src = './assets/images/github.png'/> </a> -->
             <a id = 'mail-link' target = "_blank" href = "mailto:patrickyu@berkeley.edu" > <img id = 'mail' src = './assets/images/email.png'/> </a>
-            <!-- href = "./assets/images/resume.pdf" -->
-            <a id = 'resume-link' target = "_blank" ><img id = 'resume' src = './assets/images/resume2.png'/></a>
+            
+            <a id = 'resume-link' href = "./assets/images/resume.pdf" target = "_blank" ><img id = 'resume' src = './assets/images/resume2.png'/></a>
         </div>
     </body>
 </html>

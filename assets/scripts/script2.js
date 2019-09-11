@@ -23,11 +23,11 @@ $(document).ready(function() {
     })
 
     $("#dot-2").click(function() {
-        $("#strip").css("left", -2 * 1 * distanceToNextImage);
+        $("#strip").css("left", -1 * 1 * distanceToNextImage);
     })
 
     $("#dot-3").click(function() {
-        $("#strip").css("left", -3 * 2 * distanceToNextImage);
+        $("#strip").css("left", -1 * 2 * distanceToNextImage);
     })
 
 });
